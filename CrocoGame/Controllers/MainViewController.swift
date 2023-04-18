@@ -89,7 +89,20 @@ class MainViewController: UIViewController {
     }
     
     @objc func buttonTapped(_ sender: UIButton) {
-        
+        if sender == startButton {
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeViewController(
+                   viewController: GameResultViewController(),
+                   animated: true,
+                   animationOptions: .transitionFlipFromBottom
+           )
+        }
+        if sender == rulesButton {
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeViewController(
+                   viewController: RulesViewController(),
+                   animated: true,
+                   animationOptions: .transitionFlipFromBottom
+           )
+        }
     }
     
     func setupHierarchy() {
