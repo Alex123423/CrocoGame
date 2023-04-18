@@ -182,7 +182,7 @@ class TeamViewController: UIViewController {
             slenderStack.centerYAnchor.constraint(equalTo: slenderImageView.centerYAnchor),
             slenderStack.trailingAnchor.constraint(equalTo: slenderImageView.trailingAnchor, constant: -16),
             
-            gamerReadyButton.topAnchor.constraint(equalTo: slenderView.bottomAnchor, constant: 240),
+            gamerReadyButton.topAnchor.constraint(equalTo: slenderView.bottomAnchor, constant: 250),
             gamerReadyButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
             gamerReadyButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
             gamerReadyButton.heightAnchor.constraint(equalToConstant: 70)
