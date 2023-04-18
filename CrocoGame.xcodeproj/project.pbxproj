@@ -15,7 +15,6 @@
 		17ABFBBA29EDA0AF00F7AAC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17ABFBB929EDA0AF00F7AAC0 /* Assets.xcassets */; };
 		17ABFBBD29EDA0AF00F7AAC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17ABFBBB29EDA0AF00F7AAC0 /* LaunchScreen.storyboard */; };
 		17ABFBC829EDAFF000F7AAC0 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ABFBC729EDAFF000F7AAC0 /* DefaultViewController.swift */; };
-		95D43AC929EDE476006156C9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D43AC829EDE476006156C9 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		17ABFBBC29EDA0AF00F7AAC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17ABFBBE29EDA0AF00F7AAC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17ABFBC729EDAFF000F7AAC0 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
-		95D43AC829EDE476006156C9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +81,8 @@
 			children = (
 				17ABFBB429EDA0AB00F7AAC0 /* MainViewController.swift */,
 				17ABFBC729EDAFF000F7AAC0 /* DefaultViewController.swift */,
- developer
+				170E709129EEC6BD0077D055 /* RulesViewController.swift */,
+				170E709329EECEC10077D055 /* GameResultViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,7 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
- developer
+				170E709229EEC6BD0077D055 /* RulesViewController.swift in Sources */,
 				17ABFBB529EDA0AB00F7AAC0 /* MainViewController.swift in Sources */,
 				17ABFBB129EDA0AB00F7AAC0 /* AppDelegate.swift in Sources */,
 				17ABFBC829EDAFF000F7AAC0 /* DefaultViewController.swift in Sources */,
