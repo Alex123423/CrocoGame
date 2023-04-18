@@ -9,9 +9,16 @@ import UIKit
 
 class MainViewController: UIViewController {
     
- //   let array = []
-    
     //UI elements
+    let backgroundImage: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "background")
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFill
+        image.clipsToBounds = true
+        return image
+    }()
+    
     let verStack: UIStackView = {
         let subStack = UIStackView()
         subStack.axis = .vertical
@@ -22,7 +29,7 @@ class MainViewController: UIViewController {
         return subStack
     }()
     
-    let image: UIImageView = {
+    let crocoImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "bigCroc")
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -77,10 +84,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-        
-        //methods
+
         setupHierarchy()
         setConstrains()
     }
@@ -90,8 +94,9 @@ class MainViewController: UIViewController {
     }
     
     func setupHierarchy() {
+        view.addSubview(backgroundImage)
         view.addSubview(verStack)
-        verStack.addArrangedSubview(image)
+        verStack.addArrangedSubview(crocoImage)
         verStack.addArrangedSubview(startButton)
         verStack.addArrangedSubview(rulesButton)
         view.addSubview(grassImage)
@@ -102,6 +107,19 @@ class MainViewController: UIViewController {
     func setConstrains() {
         
         NSLayoutConstraint.activate([
+            
+            backgroundImage.topAnchor.constraint(equalTo: view.topAnchor),
+            backgroundImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            backgroundImage.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            backgroundImage.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            startButton.heightAnchor.constraint(equalToConstant: 80),
+            startButton.widthAnchor.constraint(equalToConstant: 270),
+            
+            rulesButton.heightAnchor.constraint(equalToConstant: 60),
+            rulesButton.widthAnchor.constraint(equalToConstant: 210),
+
+            
             
             verStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 54),
             verStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -54),
@@ -123,11 +141,13 @@ class MainViewController: UIViewController {
             
             grassImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             grassImage.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            grassImage.heightAnchor.constraint(equalToConstant: 150),
+            grassImage.heightAnchor.constraint(equalToConstant: 70),
+            grassImage.widthAnchor.constraint(equalToConstant: 95),
             
             grassImage2.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             grassImage2.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            grassImage2.heightAnchor.constraint(equalToConstant: 150)
+            grassImage2.heightAnchor.constraint(equalToConstant: 70),
+            grassImage2.widthAnchor.constraint(equalToConstant: 95)
         ])
     }
     
