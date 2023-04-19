@@ -9,24 +9,25 @@
 /* Begin PBXBuildFile section */
 		170E709229EEC6BD0077D055 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170E709129EEC6BD0077D055 /* RulesViewController.swift */; };
 		170E709429EECEC10077D055 /* GameResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170E709329EECEC10077D055 /* GameResultViewController.swift */; };
-		1793415629EFE983004D2817 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793415529EFE983004D2817 /* CategoryViewController.swift */; };
-		1793415829EFE98D004D2817 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793415729EFE98D004D2817 /* GameViewController.swift */; };
-		1793415A29EFE997004D2817 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793415929EFE997004D2817 /* TeamViewController.swift */; };
+		176050F229F00B0C005683BC /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176050F129F00B0C005683BC /* TeamViewController.swift */; };
+		176050F729F00B52005683BC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176050F629F00B52005683BC /* CategoryViewController.swift */; };
 		17ABFBB129EDA0AB00F7AAC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ABFBB029EDA0AB00F7AAC0 /* AppDelegate.swift */; };
 		17ABFBB329EDA0AB00F7AAC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ABFBB229EDA0AB00F7AAC0 /* SceneDelegate.swift */; };
 		17ABFBB529EDA0AB00F7AAC0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ABFBB429EDA0AB00F7AAC0 /* MainViewController.swift */; };
 		17ABFBBA29EDA0AF00F7AAC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17ABFBB929EDA0AF00F7AAC0 /* Assets.xcassets */; };
 		17ABFBBD29EDA0AF00F7AAC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17ABFBBB29EDA0AF00F7AAC0 /* LaunchScreen.storyboard */; };
+
 		17ABFBC829EDAFF000F7AAC0 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ABFBC729EDAFF000F7AAC0 /* DefaultViewController.swift */; };
 		5B7D128B29F0294A003106F2 /* AlertControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D128A29F0294A003106F2 /* AlertControllerProvider.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		170E709129EEC6BD0077D055 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		170E709329EECEC10077D055 /* GameResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultViewController.swift; sourceTree = "<group>"; };
-		1793415529EFE983004D2817 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		1793415729EFE98D004D2817 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		1793415929EFE997004D2817 /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
+		176050F129F00B0C005683BC /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
+		176050F629F00B52005683BC /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		1793415B29EFEC63004D2817 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = ../../../../Desktop/CrocoGame/CrocoGame/Controllers/GameViewController.swift; sourceTree = "<group>"; };
 		17ABFBAD29EDA0AB00F7AAC0 /* CrocoGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrocoGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17ABFBB029EDA0AB00F7AAC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17ABFBB229EDA0AB00F7AAC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,8 +35,10 @@
 		17ABFBB929EDA0AF00F7AAC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17ABFBBC29EDA0AF00F7AAC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17ABFBBE29EDA0AF00F7AAC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+
 		17ABFBC729EDAFF000F7AAC0 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		5B7D128A29F0294A003106F2 /* AlertControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerProvider.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			children = (
 				17ABFBAF29EDA0AB00F7AAC0 /* CrocoGame */,
 				17ABFBAE29EDA0AB00F7AAC0 /* Products */,
+				17EA30F529F039D500A043B8 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,12 +91,11 @@
 		17ABFBC529EDA3D000F7AAC0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1793415729EFE98D004D2817 /* GameViewController.swift */,
-				1793415529EFE983004D2817 /* CategoryViewController.swift */,
 				17ABFBB429EDA0AB00F7AAC0 /* MainViewController.swift */,
-				1793415929EFE997004D2817 /* TeamViewController.swift */,
-				17ABFBC729EDAFF000F7AAC0 /* DefaultViewController.swift */,
 				170E709129EEC6BD0077D055 /* RulesViewController.swift */,
+				176050F129F00B0C005683BC /* TeamViewController.swift */,
+				176050F629F00B52005683BC /* CategoryViewController.swift */,
+				1793415B29EFEC63004D2817 /* GameViewController.swift */,
 				170E709329EECEC10077D055 /* GameResultViewController.swift */,
 				5B7D128A29F0294A003106F2 /* AlertControllerProvider.swift */,
 			);
@@ -107,6 +110,13 @@
 				17ABFBBE29EDA0AF00F7AAC0 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		17EA30F529F039D500A043B8 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,14 +191,15 @@
 			files = (
 				170E709229EEC6BD0077D055 /* RulesViewController.swift in Sources */,
 				17ABFBB529EDA0AB00F7AAC0 /* MainViewController.swift in Sources */,
-				1793415629EFE983004D2817 /* CategoryViewController.swift in Sources */,
 				17ABFBB129EDA0AB00F7AAC0 /* AppDelegate.swift in Sources */,
-				1793415829EFE98D004D2817 /* GameViewController.swift in Sources */,
-				17ABFBC829EDAFF000F7AAC0 /* DefaultViewController.swift in Sources */,
+				176050F729F00B52005683BC /* CategoryViewController.swift in Sources */,
 				17ABFBB329EDA0AB00F7AAC0 /* SceneDelegate.swift in Sources */,
-				1793415A29EFE997004D2817 /* TeamViewController.swift in Sources */,
 				170E709429EECEC10077D055 /* GameResultViewController.swift in Sources */,
+
 				5B7D128B29F0294A003106F2 /* AlertControllerProvider.swift in Sources */,
+
+				176050F229F00B0C005683BC /* TeamViewController.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
