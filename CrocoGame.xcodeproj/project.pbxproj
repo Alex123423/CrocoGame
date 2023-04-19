@@ -16,6 +16,10 @@
 		17ABFBB529EDA0AB00F7AAC0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ABFBB429EDA0AB00F7AAC0 /* MainViewController.swift */; };
 		17ABFBBA29EDA0AF00F7AAC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17ABFBB929EDA0AF00F7AAC0 /* Assets.xcassets */; };
 		17ABFBBD29EDA0AF00F7AAC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17ABFBBB29EDA0AF00F7AAC0 /* LaunchScreen.storyboard */; };
+
+		17ABFBC829EDAFF000F7AAC0 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ABFBC729EDAFF000F7AAC0 /* DefaultViewController.swift */; };
+		5B7D128B29F0294A003106F2 /* AlertControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D128A29F0294A003106F2 /* AlertControllerProvider.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		17ABFBB929EDA0AF00F7AAC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17ABFBBC29EDA0AF00F7AAC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17ABFBBE29EDA0AF00F7AAC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+
+		17ABFBC729EDAFF000F7AAC0 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
+		5B7D128A29F0294A003106F2 /* AlertControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerProvider.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,7 @@
 				176050F629F00B52005683BC /* CategoryViewController.swift */,
 				1793415B29EFEC63004D2817 /* GameViewController.swift */,
 				170E709329EECEC10077D055 /* GameResultViewController.swift */,
+				5B7D128A29F0294A003106F2 /* AlertControllerProvider.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,7 +195,11 @@
 				176050F729F00B52005683BC /* CategoryViewController.swift in Sources */,
 				17ABFBB329EDA0AB00F7AAC0 /* SceneDelegate.swift in Sources */,
 				170E709429EECEC10077D055 /* GameResultViewController.swift in Sources */,
+
+				5B7D128B29F0294A003106F2 /* AlertControllerProvider.swift in Sources */,
+
 				176050F229F00B0C005683BC /* TeamViewController.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -219,6 +219,7 @@ class GameResultViewController: UIViewController {
 		button.titleLabel?.font = .systemFont(ofSize: 17, weight: .medium)
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 		button.translatesAutoresizingMaskIntoConstraints = false
+		button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 		return button
 	}()
 	
@@ -231,11 +232,16 @@ class GameResultViewController: UIViewController {
 	}
 	
 	@objc func buttonTapped(_ sender: UIButton) {
+
+		AlertControllerProvider.shared.showAlert(on: self, title: "Сбросить игру?", message: "Вы хотите сбросить вашу игру и вернуться в главное меню?")
+		
+
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeViewController(
                viewController: MainViewController(),
                animated: false,
                animationOptions: .allowAnimatedContent
        )
+
 	}
 	
 	func setupHierarchy() {
