@@ -18,6 +18,7 @@
 		17ABFBBA29EDA0AF00F7AAC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17ABFBB929EDA0AF00F7AAC0 /* Assets.xcassets */; };
 		17ABFBBD29EDA0AF00F7AAC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17ABFBBB29EDA0AF00F7AAC0 /* LaunchScreen.storyboard */; };
 		17ABFBC829EDAFF000F7AAC0 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ABFBC729EDAFF000F7AAC0 /* DefaultViewController.swift */; };
+		5B7D128B29F0294A003106F2 /* AlertControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D128A29F0294A003106F2 /* AlertControllerProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		17ABFBBC29EDA0AF00F7AAC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17ABFBBE29EDA0AF00F7AAC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17ABFBC729EDAFF000F7AAC0 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
+		5B7D128A29F0294A003106F2 /* AlertControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				17ABFBC729EDAFF000F7AAC0 /* DefaultViewController.swift */,
 				170E709129EEC6BD0077D055 /* RulesViewController.swift */,
 				170E709329EECEC10077D055 /* GameResultViewController.swift */,
+				5B7D128A29F0294A003106F2 /* AlertControllerProvider.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				17ABFBB329EDA0AB00F7AAC0 /* SceneDelegate.swift in Sources */,
 				1793415A29EFE997004D2817 /* TeamViewController.swift in Sources */,
 				170E709429EECEC10077D055 /* GameResultViewController.swift in Sources */,
+				5B7D128B29F0294A003106F2 /* AlertControllerProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

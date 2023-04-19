@@ -218,6 +218,7 @@ class GameResultViewController: UIViewController {
 		button.layer.cornerRadius = 10
 		button.titleLabel?.font = .systemFont(ofSize: 17, weight: .medium)
 		button.translatesAutoresizingMaskIntoConstraints = false
+		button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 		return button
 	}()
 	
@@ -230,6 +231,7 @@ class GameResultViewController: UIViewController {
 	}
 	
 	@objc func buttonTapped(_ sender: UIButton) {
+		AlertControllerProvider.shared.showAlert(on: self, title: "Сбросить игру?", message: "Вы хотите сбросить вашу игру и вернуться в главное меню?")
 		
 	}
 	
