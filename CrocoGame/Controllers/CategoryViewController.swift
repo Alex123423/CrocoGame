@@ -44,6 +44,13 @@ class CategoryViewController: UIViewController {
         return label
     }()
     
+    lazy var animalSwitch: UISwitch = {
+            let switchControl = UISwitch()
+            switchControl.isOn = true
+            switchControl.translatesAutoresizingMaskIntoConstraints = false
+            return switchControl
+        }()
+    
     let animalStack: UIStackView = {
         let subStack = UIStackView()
         subStack.axis = .vertical
@@ -54,42 +61,20 @@ class CategoryViewController: UIViewController {
         return subStack
     }()
     
-    lazy var foodView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(named: "CustomYellow")
-        view.layer.cornerRadius = 10
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+    lazy var foodButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "food"), for: .normal)
+        button.setTitle("Еда", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        button.backgroundColor = UIColor(named: "CustomYellow")
+        button.titleLabel?.textAlignment = .center
+        button.layer.cornerRadius = 10
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
-    
-    lazy var foodImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "food")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
-        imageView.clipsToBounds = true
-        return imageView
-    }()
-    
-    var foodLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Еда"
-        label.numberOfLines = 1
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let foodStack: UIStackView = {
-        let subStack = UIStackView()
-        subStack.axis = .vertical
-        subStack.alignment = .center
-        subStack.distribution = .equalSpacing
-        subStack.spacing = 2.0
-        subStack.translatesAutoresizingMaskIntoConstraints = false
-        return subStack
-    }()
+
+
     
     lazy var personView: UIView = {
         let view = UIView()
@@ -184,7 +169,13 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         setupHierarchy()
         setConstrains()
+        title = "Категории"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        let backButton = UIBarButtonItem(title: "<", style: .plain, target: nil, action: nil)
+               navigationItem.backBarButtonItem = backButton
+        navigationItem.leftBarButtonItem = backButton
     }
+    
     
     @objc func buttonTapped(_ sender: UIButton) {
         
@@ -196,12 +187,11 @@ class CategoryViewController: UIViewController {
         view.addSubview(animalView)
         view.addSubview(animalImageView)
         view.addSubview(animalLabel)
+        view.addSubview(animalSwitch)
         view.addSubview(animalStack)
         
-        view.addSubview(foodView)
-        view.addSubview(foodImageView)
-        view.addSubview(foodLabel)
-        view.addSubview(foodStack)
+        view.addSubview(foodButton)
+        
         
         view.addSubview(personView)
         view.addSubview(personImageView)
@@ -238,29 +228,22 @@ class CategoryViewController: UIViewController {
             
             animalLabel.centerYAnchor.constraint(equalTo: animalImageView.centerYAnchor),
             animalLabel.leadingAnchor.constraint(equalTo: animalImageView.trailingAnchor, constant: 34),
+        
+            animalSwitch.leadingAnchor.constraint(equalTo: animalLabel.trailingAnchor, constant: 25),
+            animalSwitch.centerYAnchor.constraint(equalTo: animalView.centerYAnchor),
+
             
             animalStack.centerYAnchor.constraint(equalTo: animalView.centerYAnchor),
             animalStack.trailingAnchor.constraint(equalTo: animalView.trailingAnchor, constant: -16),
             
             
-            foodView.topAnchor.constraint(equalTo: animalView.bottomAnchor, constant: 16),
-            foodView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
-            foodView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
-            foodView.heightAnchor.constraint(equalToConstant: 90),
-            
-            foodImageView.centerYAnchor.constraint(equalTo: foodView.centerYAnchor),
-            foodImageView.leadingAnchor.constraint(equalTo: foodView.leadingAnchor, constant: 15),
-            foodImageView.heightAnchor.constraint(equalToConstant: 56),
-            foodImageView.widthAnchor.constraint(equalToConstant: 56),
-            
-            foodLabel.centerYAnchor.constraint(equalTo: foodImageView.centerYAnchor),
-            foodLabel.leadingAnchor.constraint(equalTo: foodImageView.trailingAnchor, constant: 34),
-            
-            foodStack.centerYAnchor.constraint(equalTo: foodImageView.centerYAnchor),
-            foodStack.trailingAnchor.constraint(equalTo: foodImageView.trailingAnchor, constant: -16),
+            foodButton.topAnchor.constraint(equalTo: animalView.bottomAnchor, constant: 16),
+            foodButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
+            foodButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
+            foodButton.heightAnchor.constraint(equalToConstant: 90),
             
             
-            personView.topAnchor.constraint(equalTo: foodView.bottomAnchor, constant: 16),
+            personView.topAnchor.constraint(equalTo: foodButton.bottomAnchor, constant: 16),
             personView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
             personView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
             personView.heightAnchor.constraint(equalToConstant: 90),

@@ -9,6 +9,7 @@
 import UIKit
 
 class TeamViewController: UIViewController {
+    
     // MARK: - UI elements
     
     var backgroundImage: UIImageView = {
@@ -101,28 +102,37 @@ class TeamViewController: UIViewController {
         button.backgroundColor = UIColor(named: "CustomGreen")
         button.layer.cornerRadius = 10
         button.titleLabel?.font = .systemFont(ofSize: 17.0, weight: .medium)
-        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(goToCategoryViewController), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-        //methods
+        title = "Кто играет?"
+        navigationController?.navigationBar.prefersLargeTitles = true
         setupHierarchy()
         setConstrains()
+        
+        
     }
     
-    @objc func buttonTapped(_ sender: UIButton) {
-        
+    @objc func goToCategoryViewController() {
+           let categoryViewController = CategoryViewController()
+           let navigationController = UINavigationController(rootViewController: categoryViewController)
+           navigationController.modalPresentationStyle = .fullScreen
+           present(navigationController, animated: true, completion: nil)
+       }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
     
     private func setupHierarchy() {
         view.addSubview(backgroundImage)
-     
+        
         view.addSubview(cowboyView)
         view.addSubview(cowboyImageView)
         view.addSubview(cowboyLabel)
@@ -132,7 +142,7 @@ class TeamViewController: UIViewController {
         view.addSubview(slenderImageView)
         view.addSubview(slenderLabel)
         view.addSubview(slenderStack)
-      
+        
         view.addSubview(gamerReadyButton)
     }
     
@@ -151,7 +161,7 @@ class TeamViewController: UIViewController {
             cowboyView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
             cowboyView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
             cowboyView.heightAnchor.constraint(equalToConstant: 96),
-
+            
             cowboyImageView.centerYAnchor.constraint(equalTo: cowboyView.centerYAnchor),
             cowboyImageView.leadingAnchor.constraint(equalTo: cowboyView.leadingAnchor, constant: 15),
             cowboyImageView.heightAnchor.constraint(equalToConstant: 56),
@@ -162,13 +172,13 @@ class TeamViewController: UIViewController {
             
             cowboyStack.centerYAnchor.constraint(equalTo: cowboyView.centerYAnchor),
             cowboyStack.trailingAnchor.constraint(equalTo: cowboyView.trailingAnchor, constant: -16),
-
+            
             
             slenderView.topAnchor.constraint(equalTo: cowboyView.bottomAnchor, constant: 16),
             slenderView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
             slenderView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
             slenderView.heightAnchor.constraint(equalToConstant: 96),
-
+            
             slenderImageView.centerYAnchor.constraint(equalTo: slenderView.centerYAnchor),
             slenderImageView.leadingAnchor.constraint(equalTo: slenderView.leadingAnchor, constant: 15),
             slenderImageView.heightAnchor.constraint(equalToConstant: 56),
@@ -186,15 +196,14 @@ class TeamViewController: UIViewController {
             gamerReadyButton.heightAnchor.constraint(equalToConstant: 70)
         ])
         
-        /*
-         // MARK: - Navigation
-         
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-         }
-         */
+        // MARK: - Navigation
         
+//        let viewController = UIViewController()
+//        let navigationController = UINavigationController(rootViewController: viewController)
+//        navigationController.navigationBar.prefersLargeTitles = true
+//        navigationController.modalPresentationStyle = .fullScreen
+//        present(navigationController, animated: true, completion: nil)
+//
+        }
     }
-}
+
