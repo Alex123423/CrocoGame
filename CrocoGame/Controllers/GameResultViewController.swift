@@ -217,6 +217,7 @@ class GameResultViewController: UIViewController {
 		button.backgroundColor = UIColor(named: "CustomGreen")
 		button.layer.cornerRadius = 10
 		button.titleLabel?.font = .systemFont(ofSize: 17, weight: .medium)
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 		button.translatesAutoresizingMaskIntoConstraints = false
 		return button
 	}()
@@ -230,7 +231,11 @@ class GameResultViewController: UIViewController {
 	}
 	
 	@objc func buttonTapped(_ sender: UIButton) {
-		
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeViewController(
+               viewController: MainViewController(),
+               animated: false,
+               animationOptions: .allowAnimatedContent
+       )
 	}
 	
 	func setupHierarchy() {

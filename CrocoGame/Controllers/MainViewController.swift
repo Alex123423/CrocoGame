@@ -57,7 +57,8 @@ class MainViewController: UIViewController {
         button.backgroundColor = UIColor(named: "CustomGreen")
         button.layer.cornerRadius = 15
         button.titleLabel?.font = .systemFont(ofSize: 17.0, weight: .medium)
-        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        //button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -83,24 +84,30 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupHierarchy()
         setConstrains()
     }
+    
+    @objc func buttonPressed() {
+       let viewController = RulesViewController()
+       if let navigator = navigationController {
+           navigator.pushViewController(viewController, animated: false)
+       }
+   }
     
     @objc func buttonTapped(_ sender: UIButton) {
         if sender == startButton {
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeViewController(
                    viewController: GameResultViewController(),
-                   animated: true,
-                   animationOptions: .transitionFlipFromBottom
+                   animated: false,
+                   animationOptions: .allowAnimatedContent
            )
         }
         if sender == rulesButton {
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeViewController(
                    viewController: RulesViewController(),
-                   animated: true,
-                   animationOptions: .transitionFlipFromBottom
+                   animated: false,
+                   animationOptions: .allowAnimatedContent
            )
         }
     }
